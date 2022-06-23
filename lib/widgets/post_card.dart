@@ -139,53 +139,49 @@ class PostCard extends StatelessWidget {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          Container(
-            child: Row(
-              children: [
-                Container(
-                  width: 20,
-                  height: 20,
-                  decoration: BoxDecoration(
-                    color: Colors.blue,
-                    shape: BoxShape.circle,
-                  ),
-                  child: Icon(
-                    Iconsax.like_15,
-                    color: Colors.white,
-                    size: 12,
-                  ),
+          Row(
+            children: [
+              Container(
+                width: 20,
+                height: 20,
+                decoration: BoxDecoration(
+                  color: Colors.blue,
+                  shape: BoxShape.circle,
                 ),
-                SizedBox(width: 5),
-                displayText(lable: likeCount),
-              ],
-            ),
+                child: Icon(
+                  Iconsax.like_15,
+                  color: Colors.white,
+                  size: 12,
+                ),
+              ),
+              SizedBox(width: 5),
+              displayText(lable: likeCount),
+            ],
           ),
-          Container(
-            child: Row(
-              children: [
-                displayText(lable: commentCount),
-                SizedBox(width: 5),
-                displayText(lable: "Comments"),
-                SizedBox(width: 10),
-                displayText(lable: shareCount),
-                SizedBox(width: 5),
-                displayText(lable: "Shares"),
-                SizedBox(width: 10),
-                Avatar(
-                  displayImage: profile4,
-                  displaystatus: false,
-                  height: 25,
-                  width: 25,
+          Row(
+            children: [
+              displayText(lable: commentCount),
+              SizedBox(width: 5),
+              displayText(lable: "Comments"),
+              SizedBox(width: 10),
+              displayText(lable: shareCount),
+              SizedBox(width: 5),
+              displayText(lable: "Shares"),
+              SizedBox(width: 10),
+              Avatar(
+                displayImage: profile4,
+                displaystatus: false,
+                height: 25,
+                width: 25,
+              ),
+              IconButton(
+                onPressed: () {},
+                icon: Icon(
+                  Iconsax.arrow_down_1,
+                  color: Colors.grey[600],
                 ),
-                IconButton(
-                  onPressed: () {},
-                  icon: Icon(
-                    Iconsax.arrow_down_1,
-                    color: Colors.grey[600],
-                  ),
-                )
-              ],
-            ),
+              )
+            ],
           ),
         ],
       ),
